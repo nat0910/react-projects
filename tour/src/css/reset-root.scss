@@ -1,0 +1,29 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: #e7e7e7;
+  --cont-bg: #ffffff;
+  --primary-ftn: rgb(31, 31, 46);
+  --secondary-ftn: rgb(107, 108, 117);
+  --failure-bg: #f8d7da;
+  --failure-clr: #f83447;
+}
+
+@mixin position-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5%;
+}
+
+$border-radius: (
+  "sm": 0.3em,
+  "md": 0.7em,
+  "lg": 1em,
+);

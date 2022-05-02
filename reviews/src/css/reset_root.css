@@ -1,0 +1,15 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-clr:#e7e7e7;
+  --cont-bg:#ffffff;
+  --primary-fnt:rgb(32, 32, 48);
+  --secondary-fnt:rgb(121, 121, 139);
+  --arrow-btn:rgb(145, 148, 177);
+}
+/*# sourceMappingURL=reset_root.css.map */

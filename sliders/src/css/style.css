@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: rgb(146, 153, 231);
+  --cont-clr: #3a3c52;
+  --font-clr: #ffffff;
+  --secondary-clr: #ededed;
+}
+
+body {
+  background-color: var(--bg-clr);
+  color: var(--font-clr);
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+
+.title {
+  color: var(--font-clr);
+  font-size: 3.5em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  letter-spacing: 5px;
+}
+
+.container {
+  margin-top: 2%;
+  width: 60%;
+  height: 25em;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .arrow {
+  z-index: 1;
+  background-color: #5255758c;
+  color: #4f5485;
+  font-size: 2.5em;
+  width: 1em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.25rem;
+}
+
+.container .arrow:hover {
+  cursor: pointer;
+  background-color: #3a3c52;
+  color: #7c82c4;
+}
+
+.name {
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.7em;
+  margin-top: 2%;
+  color: var(--font-clr);
+}
+
+.cont-title {
+  width: 100%;
+  text-transform: capitalize;
+  margin-top: 0.5%;
+  color: var(--secondary-clr);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.quote {
+  width: 100%;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 1.25;
+}
+
+.img-cont {
+  height: 8em;
+  width: 8em;
+  position: relative;
+}
+
+.img-cont .person-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.area {
+  width: 75%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--bg-clr);
+  -webkit-box-shadow: 5px 5px 10px #7c82c4, -5px -5px 10px #a8b0ff;
+          box-shadow: 5px 5px 10px #7c82c4, -5px -5px 10px #a8b0ff;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2em 1em;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.05em;
+  font-weight: 600;
+  padding: 0 1em;
+}
+
+article.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+article.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+article.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+/*# sourceMappingURL=style.css.map */
