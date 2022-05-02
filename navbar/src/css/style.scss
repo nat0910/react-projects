@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --accent-color: #006eda;
+  --transition-nav: 300ms linear;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+}
+
+body {
+  background-color: #e7e7e7;
+}
+
+nav {
+  background-color: #fff;
+  width: 100%;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  color: var(--accent-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition-nav);
+  padding: 0.3rem 2rem;
+}
+
+.nav-header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+  }
+}
+
+.nav-toggle {
+  cursor: pointer;
+  height: 1.25rem;
+  width: 1.5rem;
+  flex-direction: column;
+  display: none;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  span {
+    padding: 0;
+    margin: 0;
+    height: 0.2rem;
+    width: 100%;
+    background-color: var(--accent-color);
+    border-radius: 1rem;
+    display: block;
+    transition: var(--transition-nav);
+
+    &:nth-of-type(1) {
+      width: 50%;
+    }
+
+    &:nth-of-type(3) {
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    display: flex;
+  }
+}
+
+.toggle-active {
+  span {
+    &:nth-of-type(1) {
+      transform: rotateZ(-45deg) translate(-7.3px, 3.5px);
+      transform-origin: top;
+    }
+
+    &:nth-of-type(2) {
+      transform-origin: bottom;
+      transform: rotateZ(45deg);
+    }
+
+    &:nth-of-type(3) {
+      width: 50%;
+      transform-origin: top;
+      transform: rotateZ(-45deg) translate(-7.5px, -14.4px);
+    }
+  }
+}
+
+.nav-content ul {
+  text-align: center;
+  display: flex;
+
+  li {
+    list-style: none;
+    padding: 0rem 1rem;
+
+    a {
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: capitalize;
+      display: block;
+
+      &:visited {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-content {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transform-origin: top;
+    transform-style: var(--transition-nav);
+
+    ul {
+      text-align: center;
+      flex-direction: column;
+      li {
+        padding: 0.7rem 0;
+      }
+    }
+  }
+  .toggle-active-nav {
+    height: auto;
+  }
+}

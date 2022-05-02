@@ -1,0 +1,13 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  background: #c4dcf3;
+}
+/*# sourceMappingURL=reset_root.css.map */

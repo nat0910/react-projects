@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-clr: #8ec58e;
+}
+
+body {
+  background-color: var(--bg-clr);
+}
+
+.container {
+  height: auto;
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  padding: 0 1em;
+}
+
+header p {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+
+.form label {
+  font-weight: 400;
+  font-size: 1.15em;
+}
+
+.form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2em;
+}
+
+.form button {
+  font-size: 1.05em;
+  padding: 0.2em 0.7em;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: white;
+  background-color: #7a4df5;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #9a77fc;
+}
+
+.form-control > input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2em 0.4em;
+  text-align: center;
+  width: 6em;
+  font-size: 1em;
+}
+
+main {
+  margin: 3.5% 0;
+  padding: 0 2.5em;
+}
+
+main p {
+  text-align: justify;
+  padding: 0.3em 0;
+  color: #272338;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
