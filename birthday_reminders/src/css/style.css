@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: rgb(233, 94, 136);
+  --item: #fbfbfb;
+  --cont-bg: #fafafa;
+  --success-bg: #d4edda;
+  --success-clr: #155724;
+  --primary-clr: #212529;
+  --secondary-clr: #6c757d;
+  --failure-bg: #f8d7da;
+  --failure-clr: #dc3545;
+}
+
+body {
+  background-color: var(--bg-clr);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25%;
+  height: auto;
+  background-color: var(--cont-bg);
+  border-radius: 1rem;
+  padding: 2.5em 3em;
+}
+
+.heading {
+  text-align: center;
+  font-weight: lighter;
+  font-family: "Dancing", cursive;
+  color: #1f2535;
+  font-size: 2.5em;
+}
+
+.item {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
+}
+
+.alert {
+  display: none;
+}
+
+.success {
+  background-color: var(--success-bg);
+  color: var(--success-clr);
+  text-transform: capitalize;
+  width: 100%;
+  padding: 0.3em 1.5em;
+  margin-top: 5%;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.success .bi-x {
+  font-size: 1.75em;
+  color: #080808;
+  cursor: pointer;
+}
+
+.cards {
+  width: 100%;
+  height: 6em;
+  background-color: var(--item);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 15px rgba(105, 102, 102, 0.16);
+          box-shadow: 0 0 15px rgba(105, 102, 102, 0.16);
+  border-radius: 0.5rem;
+  padding: 0 0.25em;
+}
+
+.cards .profile {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+}
+
+.cards .cards-body {
+  width: 50%;
+  height: 3.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: capitalize;
+  padding-left: .5em;
+}
+
+.cards .cards-body .name {
+  color: var(--primary-clr);
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.cards .cards-body .date {
+  color: var(--secondary-clr);
+  margin-left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.btn {
+  position: relative;
+  margin-top: 7.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.65em 1.5em;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--failure-bg);
+  color: var(--failure-clr);
+  font-size: 1em;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.check {
+  padding: 0 0.5em;
+  border: none;
+  background-color: transparent;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1em;
+  letter-spacing: .07em;
+  color: #003cff;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

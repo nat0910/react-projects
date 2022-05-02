@@ -1,0 +1,127 @@
+@import "./reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+body {
+  background-color: var(--bg-clr);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  @include center;
+  width: 25%;
+  height: auto;
+  background-color: var(--cont-bg);
+  border-radius: map-get($bdr-radius, "lg");
+  padding: 2.5em 3em;
+}
+
+.heading {
+  text-align: center;
+  font-weight: lighter;
+  font-family: "Dancing", cursive;
+  color: #1f2535;
+  font-size: 2.5em;
+}
+
+.item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.alert {
+  display: none;
+}
+
+.success {
+  background-color: var(--success-bg);
+  color: var(--success-clr);
+  text-transform: capitalize;
+  width: 100%;
+  padding: 0.3em 1.5em;
+  margin-top: 5%;
+  border-radius: map-get($bdr-radius, "sm");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .bi-x {
+    font-size: 1.75em;
+    color: #080808;
+    cursor: pointer;
+  }
+}
+
+.cards {
+  width: 100%;
+  height: 6em;
+  background-color: var(--item);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(105, 102, 102, 0.16);
+  border-radius: map-get($bdr-radius, "sm");
+  padding: 0 0.25em;
+  .profile {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+  }
+
+  .cards-body {
+    width: 50%;
+    height: 3.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding-left: .5em;
+    .name {
+      color: var(--primary-clr);
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+    .date {
+      color: var(--secondary-clr);
+      margin-left: 2%;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  margin-top: 7.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.65em 1.5em;
+  border: none;
+  border-radius: map-get($bdr-radius, "sm");
+  background-color: var(--failure-bg);
+  color: var(--failure-clr);
+  font-size: 1em;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.check {
+  padding: 0 0.5em;
+  border: none;
+  background-color: transparent;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1em;
+  letter-spacing: .07em;
+  color: rgb(0, 60, 255);
+  cursor: pointer;
+}

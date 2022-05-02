@@ -1,0 +1,69 @@
+import React , {useState}from 'react';
+import reactDom from 'react-dom';
+import { data } from '../src/data';
+import './css/style.css';
+
+function App(){
+    
+  const alert_close = ()=>{
+    let propmt = document.querySelector('.alert');
+    propmt.style.display="none";
+  }
+
+  const [people,setPeople] = useState(data);
+
+
+
+  return (
+    <React.Fragment>
+
+      <div className="container">
+        <h1 className="heading">Birthday Remainders</h1>
+        <div className="alert">
+          <div className="success">
+              <p>birthday successfully remainded!! ☺️</p>
+              <i class="bi bi-x" onClick={alert_close}></i>
+          </div>
+        </div>
+        <div className="item">
+          {
+              people.map((person)=>{
+                 const data = person;
+                 return <>
+                  <Cards key={data.id} {...data}></Cards></>
+               })
+          }
+        </div>
+        <button type="button" className="btn" onClick={()=>setPeople([])}>
+          Check All
+        </button>
+      </div>
+    </React.Fragment>
+  )
+}
+
+const Cards = (para)=>{
+  
+  const alert_open = ()=>{
+    console.log('hello world');
+    let propmt = document.querySelector('.alert');
+    propmt.style.display="block";
+  }
+  return(
+  <div className="cards">
+      <img className="profile" src={para.img} alt="jaisica profile picture"></img> 
+      <div className="cards-body">
+        <p className="name"> {para.name}</p>
+        <div className="date">
+            <i class="bi bi-calendar-event"></i>
+            <p style={{marginLeft:'0.5em'}}>{para.date}</p>
+        </div>
+      </div>
+      <div>
+        <input type="checkbox" name="" id="" onClick={alert_open}  width="3em" height="3em"/>
+      </div>
+  </div>
+  );
+}
+
+reactDom.render(<App/>,document.getElementById('root'));

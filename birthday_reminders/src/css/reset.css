@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: rgb(233, 94, 136);
+  --item: #fbfbfb;
+  --cont-bg: #fafafa;
+  --success-bg: #d4edda;
+  --success-clr: #155724;
+  --primary-clr: #212529;
+  --secondary-clr: #6c757d;
+  --failure-bg: #f8d7da;
+  --failure-clr: #dc3545;
+}
+/*# sourceMappingURL=reset.css.map */
